@@ -1,8 +1,8 @@
 /**
  * 1. Terminal RUN in directory source code : npm install readline-sync
- * 2. Run and Debug with VS Code
- * 3. Create launch.json
- * 4. add in Configuration ===> "console": "integratedTerminal"
+ * 2. Create launch.json
+ * 3. add in Configuration ===> "console": "integratedTerminal"
+ * 4. Run and Debug with VS Code
  */
 
 const readline = require('readline-sync');
