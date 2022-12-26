@@ -2,15 +2,15 @@ let baris = '';
 function segitigaSiku(jumlahBaris) {
     baris += '*';
 
-    let index = jumlahBaris + 1;
+    let index = jumlahBaris - 1;
 
-    if (index <= 10) {
+    if (0 <= index) {
         console.info(baris);
         segitigaSiku(index);
     }
 }
 
-segitigaSiku(1);
+segitigaSiku(10);
 
 // for (let i = 1; i <= 5; i++) {
 //     // Buat string kosong untuk menyimpan baris segitiga
