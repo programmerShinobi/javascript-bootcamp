@@ -1,22 +1,9 @@
-// Segitiga sama sisi : FOR
-console.info("Segitiga : FOR");
-let data = 10;
-let concat = " ";
-for (let i = 1; i <= data; i++) {
-    if (i % 2 == 1) {
-        let angka = i + " ";
-        concat = concat.repeat(data - i) + angka.repeat(i);
-        console.info(concat);
-        concat = " ";
-    }
-}
-
 // Segitiga sama sisi : For in Fucntion
-function segitigaSamaSisi_for(data) {
+function mirorSegitigaSamaSisi_for(data) {
     console.info(`\n`);
-    console.info("Segitiga : FOR IN FUNCTION");
+    console.info("Miror Segitiga : FOR IN FUNCTION");
     let concat = " ";
-    for (let i = 1; i <= data; i++) {
+    for (let i = data; i >= i; i--) {
         if (i % 2 == 1) {
             let angka = i + " ";
             concat = concat.repeat(data - i) + angka.repeat(i);
@@ -26,10 +13,11 @@ function segitigaSamaSisi_for(data) {
     }
 }
 
+
 // Segitiga sama sisi : While in Function
-function segitigaSamaSisi_while(data) {
+function MirorSegitigaSamaSisi_while(data) {
     console.info(`\n`);
-    console.info("Segitiga : WHILE IN FUNCTION");
+    console.info("Miror Segitiga : WHILE IN FUNCTION");
     let concat = " ";
     let i = 1;
     while (i <= data) {
@@ -43,8 +31,5 @@ function segitigaSamaSisi_while(data) {
     }
 }
 
-
-
-
-segitigaSamaSisi_for(10);
-segitigaSamaSisi_while(10);
+mirorSegitigaSamaSisi_for(10);
+// mirorSegitigaSamaSisi_while(10);

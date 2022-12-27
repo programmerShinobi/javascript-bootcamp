@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\day3\\04-quiz.js",
+            "program": "${workspaceFolder}\\day3\\04-quiz2.js",
             "console": "integratedTerminal"
         }
     ]
