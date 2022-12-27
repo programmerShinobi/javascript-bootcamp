@@ -67,17 +67,6 @@ for (const user of users) {
 };
 console.info(`\n`);
 
-// iterasi segitiga siku
-for (let i = 0; i < 6; i++) {
-    let concat = "";
-    for (let j = i; j < 6; j++) {
-        concat = j - i + " " + concat
-    }
-    console.info(concat.replace("0", ""));
-    console.info()
-}
-console.info(`\n`);
-
 // iterasi persegi panjang
 let lastCount = 0;
 for (let i = 0; i < 5; i++) {
@@ -89,6 +78,17 @@ for (let i = 0; i < 5; i++) {
     console.info();
 }
 
+// iterasi segitiga siku
+for (let i = 0; i < 6; i++) {
+    let concat = "";
+    for (let j = i; j < 6; j++) {
+        concat = j - i + " " + concat
+    }
+    console.info(concat.replace("0", ""));
+    console.info()
+}
+console.info(`\n`);
+
 const n = 6;
 let concat = " ";
 let angka = "# ";
@@ -99,6 +99,7 @@ for (let i = 1; i <= n; i++) {
 }
 console.info(`\n`);
 
+// iterasi segitiga sama sisi
 const m = 6;
 let concat2 = " ";
 let angka2 = "# ";
@@ -109,6 +110,7 @@ for (let i = 1; i <= m; i++) {
 }
 console.info(`\n`);
 
+// iterasi 1 ~ 10
 for (let i = 0; i < 10; i++) {
     console.info(i + 1);
     if (i % 1 == 3) break;
