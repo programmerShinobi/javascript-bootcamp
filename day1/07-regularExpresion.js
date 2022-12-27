@@ -39,3 +39,39 @@ let regex8 = /ap{2,4}/;
 let string8 = "four p's in appppple";
 console.info(string8.match(regex8));
 
+// [...]
+let regex9 = /a[px]e/;
+let string9 = "ape and axe but not ale";
+console.info(string9.match(regex9));
+
+// [^...]
+let regex10 = /a[^px]/;
+let string10 = "ale but not axe or ape";
+console.info(string10.match(regex10));
+
+// \b
+let regex11 = /\bno/;
+let string11 = "the first no in nono";
+console.info(string11.match(regex11));
+
+// \B
+let regex12 = /\Bno/;
+let string12 = "the second no in nono";
+console.info(string12.match(regex12));
+
+// \d
+let regex13 = /\d{3}/;
+let string13 = "123 in Now 123";
+console.info(string13.match(regex13));
+
+// \w
+let regex14 = /\w/;
+let string14 = "js in javascript";
+console.info(string14.match(regex14));
+
+// \W
+let regex15 = /\W/;
+let string15 = "% in 100%";
+console.info(string15.match(regex15));
+
+
