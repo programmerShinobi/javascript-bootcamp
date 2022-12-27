@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\day2\\18-segitiga-siku.js",
+            "program": "${workspaceFolder}\\day3\\02-init-arrays.js",
             "console": "integratedTerminal"
         }
     ]
