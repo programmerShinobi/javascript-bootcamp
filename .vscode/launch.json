@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\day1\\10-e-function-arrow.js",
+            "program": "${workspaceFolder}\\day3\\01-looping.js",
             "console": "integratedTerminal"
         }
     ]

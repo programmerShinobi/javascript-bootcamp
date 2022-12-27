@@ -116,4 +116,15 @@ for (let i = 0; i < 10; i++) {
     if (i % 1 == 3) break;
 }
 
+// iterasi vertical
+let strV = 0;
+for (let i = 1; i < 10; i++) {
+    console.info(i)
+}
+// iterasi horizontal
+let strH = 0;
+for (let i = 1; i < 10; i++) {
+    strH = strH + " " + i
+}
+console.info(strH);
 
