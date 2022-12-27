@@ -1,4 +1,4 @@
-function segitigaSamaSisi(data) {
+function segitigaSamaSisi_for(data) {
     let concat = " ";
     for (let i = 1; i <= data; i++) {
         if (i % 2 == 1) {
@@ -10,7 +10,7 @@ function segitigaSamaSisi(data) {
     }
 }
 
-function segitigaSamaSisi2(data) {
+function segitigaSamaSisi_while(data) {
     let concat = " ";
     let i = 1;
     while (i <= data) {
@@ -24,8 +24,8 @@ function segitigaSamaSisi2(data) {
     }
 }
 
-console.info(segitigaSamaSisi(10));
-console.info(segitigaSamaSisi2(10));
+console.info(segitigaSamaSisi_for(10));
+console.info(segitigaSamaSisi_while(10));
 
 
 
