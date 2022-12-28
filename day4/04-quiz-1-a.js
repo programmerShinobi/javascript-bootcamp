@@ -89,12 +89,6 @@ const getPayment = (choosePackage) => {
     });
 }
 
-//-------------------------------------------------(4)
-// const orderTicket = async (regist) => {
-//     const numbRegister = await getRegister(regist);
-//     const paymentCode = await getPayment(numbRegister);
-//     return [numbRegister, paymentCode];
-// }
 
 //-------------------------------------------------(1)
 const orderTicket = async () => {
@@ -106,7 +100,7 @@ const orderTicket = async () => {
         const numbRegister = await getRegister(chooseQueue);
         const paymentCode = await getPayment(numbRegister);
         console.info([numbRegister, paymentCode]);
-        insertData({ registCode: numbRegister, package: chooseQueue, paymentCode: paymentCode })
+        insertData({ registCode: chooseQueue, packageCode: numbRegister, paymentCode: paymentCode })
             .then(() => {
                 console.info(Objects);
             });
