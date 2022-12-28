@@ -17,6 +17,7 @@
  *                              "console": "integratedTerminal"
  * 4. Run and Debug with VS Code
  */
+
 //-------------------------------------------------(2)
 const getRegister = (chooseQueue) => {
     return new Promise((resolve, reject) => {
