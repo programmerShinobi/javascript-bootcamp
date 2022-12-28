@@ -2,7 +2,7 @@ const getNomorAntri = (nomor) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve(nomor);
-            reject(nomor);
+            // reject(nomor);
             console.info(nomor);
         }, 10000);
     });
@@ -11,7 +11,7 @@ const getNomorAntri = (nomor) => {
 const pilihPaket = (nomor, paket) => {
     return new Promise((resolve, reject) => {
         let messages;
-        if (nomor <= 10 && !(isNaN(nomor))) {
+        if (nomor <= 10 || (isNaN(nomor))) {
             throw new Error('Silahkan antri');
         } else {
             if (paket === "A") {
@@ -20,7 +20,6 @@ const pilihPaket = (nomor, paket) => {
                 messages = "KFC Paket B";
             }
         }
-
 
         setTimeout(() => {
             resolve(messages);
@@ -39,21 +38,20 @@ const tagihan = (paket) => {
             packages = 24000;
         }
 
-
         setTimeout(() => {
             resolve(packages);
-            reject(packages);
+            // reject(packages);
             console.info(packages);
         }, 4000);
     });
 }
 
 const orderKFC = async (paket) => {
-    const nomorAntri = await getNomorAntri(11);
+    const nomorAntri = await getNomorAntri(5);
     const menu = await pilihPaket(nomorAntri, paket);
     const total = await tagihan(menu);
     return [nomorAntri, menu, total];
 }
 
 orderKFC("A").then(res => console.info(res))
-    .catch(Err => console.info(Err.toString()));
+    .catch(Err => console.error(Err.toString()));
