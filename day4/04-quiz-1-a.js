@@ -42,7 +42,7 @@ const getStart = () => {
 
         let readline1 = require('readline-sync');
         const registCode = parseInt(readline1.question(
-            `\nWORKSHOP WEB DEVELOPMENT\nRegister code options : 1 ~ 12\n------------------------------\nEnter your register code: `
+            `\nWORKSHOP WEB DEVELOPMENT\nRegister code options : 1 ~ 12\n------------------------------\nEnter your register code : `
         ));
         if (registCode > 12 || isNaN(registCode)) {
             throw new Error(`Notification : FAILED! => Sorry, the package code choice you entered is invalid..!`);
