@@ -53,7 +53,7 @@ const getPayment = (choosePackage) => {
         let messages;
         let readline2 = require('readline-sync');
         let chooseMethod = readline2.question(
-            `\nPayment method options :\n- BCA\n- BNI\n- BRI \n--------------------------\nEnter your payment method BCA/BNI/BRI : `
+            `\nPayment method options :\n- BCA\n- BNI\n- BRI \n-------------------------------------\nEnter your payment method BCA/BNI/BRI : `
         );
         if (chooseMethod == "BCA") {
             messages = "Notification : SUCCESS! => Your choice of payment method => BCA";
