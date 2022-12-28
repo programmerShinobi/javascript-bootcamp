@@ -18,6 +18,23 @@
  * 4. Run and Debug with VS Code
  */
 
+let Objects = [];
+function insertData(data) {
+    return new Promise((resolve, reject) => {
+        // Push the data object to the array
+        try {
+            Objects.push(data);
+
+            // If the data object was inserted successfully, resolve the Promise
+            resolve();
+        } catch (error) {
+            // If there was an error, reject the Promise
+            reject(error);
+        }
+    });
+}
+
+
 //-------------------------------------------------(2)
 const getRegister = (chooseQueue) => {
     return new Promise((resolve, reject) => {
@@ -73,18 +90,36 @@ const getPayment = (choosePackage) => {
 }
 
 //-------------------------------------------------(4)
-const orderTicket = async (regist) => {
-    const numbRegister = await getRegister(regist);
-    const paymentCode = await getPayment(numbRegister);
-    return [numbRegister, paymentCode];
-}
+// const orderTicket = async (regist) => {
+//     const numbRegister = await getRegister(regist);
+//     const paymentCode = await getPayment(numbRegister);
+//     return [numbRegister, paymentCode];
+// }
 
 //-------------------------------------------------(1)
-let readline1 = require('readline-sync');
-let pilihanAntrian = parseInt(readline1.question(
-    `WORKSHOP WEB DEVELOPMENT\nQueue number options : 1 ~ 12\n-----------------------------\nEnter your queue number : `
-));
+const orderTicket = async () => {
+    while (true) {
+        let readline1 = require('readline-sync');
+        const chooseQueue = parseInt(readline1.question(
+            `WORKSHOP WEB DEVELOPMENT\nQueue number options : 1 ~ 12\n-----------------------------\nEnter your queue number : `
+        ));
+        const numbRegister = await getRegister(chooseQueue);
+        const paymentCode = await getPayment(numbRegister);
+        console.info([numbRegister, paymentCode]);
+        insertData({ registCode: numbRegister, package: chooseQueue, paymentCode: paymentCode })
+            .then(() => {
+                console.info(Objects);
+            });
 
-orderTicket(pilihanAntrian).then(res => console.info(res))
+        const answer = readline1.question(
+            `\nDo you want to continue ordering tickets? (Y/N) `
+        );
+        if (answer.toLowerCase() === "n") {
+            break;
+        }
+    }
+};
+
+orderTicket()
     .catch(Err => console.error(Err.toString()));
 
