@@ -36,30 +36,33 @@ function insertData(data) {
 
 
 //-------------------------------------------------(2)
-const getRegister = (chooseQueue) => {
+const getRegister = (registCode) => {
     return new Promise((resolve, reject) => {
-        let messages;
-        if (chooseQueue > 12 || (isNaN(chooseQueue))) {
+        let value;
+        if (registCode > 12 || (isNaN(registCode))) {
             throw new Error('Notification : ERROR! => Sorry, Invalid Registration Number..!');
         } else {
-            console.info(`Notification : SUCCESS! => Your choice of queue number => ${chooseQueue}`);
+            console.info(`Notification : SUCCESS! => Your choice of queue number => ${registCode}`);
             let readline2 = require('readline-sync');
             let choosePackage = readline2.question(
                 `\nPackage code options :\nA => Rp. 300.000 (VIP)\nB => Rp. 200.000 (Reguler)\nC => Rp. 100.000 (Economy)\n--------------------------\nEnter your package A/B/C : `
             );
             if (choosePackage == "A") {
-                messages = "Notification : SUCCESS! => Your choice of code package => A => Rp. 300.000 (VIP)";
+                value = choosePackage;
+                notif = "Notification : SUCCESS! => Your choice of code package => A => Rp. 300.000 (VIP)";
             } else if (choosePackage == "B") {
-                messages = "Notification : SUCCESS! => Your choice of code package => B => Rp. 200.000 (Reguler)";
+                value = choosePackage;
+                notif = "Notification : SUCCESS! => Your choice of code package => B => Rp. 200.000 (Reguler)";
             } else if (choosePackage == "C") {
-                messages = "Notification : SUCCESS! => Your choice of code package => C => Rp. 100.000 (Economy)";
+                value = choosePackage;
+                notif = "Notification : SUCCESS! => Your choice of code package => C => Rp. 100.000 (Economy)";
             } else {
                 throw new Error(`Notification : FAILED! => Sorry, the package code choice you entered is invalid..!`);
             }
         }
-        resolve(messages);
-        reject(messages);
-        console.info(messages);
+        resolve(value);
+        reject(value);
+        console.info(notif);
 
     });
 }
@@ -67,24 +70,27 @@ const getRegister = (chooseQueue) => {
 //-------------------------------------------------(3)
 const getPayment = (choosePackage) => {
     return new Promise((resolve, reject) => {
-        let messages;
+        let value;
         let readline2 = require('readline-sync');
         let chooseMethod = readline2.question(
             `\nPayment method options :\n- BCA\n- BNI\n- BRI \n-------------------------------------\nEnter your payment method BCA/BNI/BRI : `
         );
         if (chooseMethod == "BCA") {
-            messages = "Notification : SUCCESS! => Your choice of payment method => BCA";
+            value = chooseMethod;
+            notif = "Notification : SUCCESS! => Your choice of payment method => BCA";
         } else if (chooseMethod == "BNI") {
-            messages = "Notification : SUCCESS! => Your choice of payment method => BNI";
+            value = chooseMethod;
+            notif = "Notification : SUCCESS! => Your choice of payment method => BNI";
         } else if (chooseMethod == "BRI") {
-            messages = "Notification : SUCCESS! => Your choice of payment method => BRI";
+            value = chooseMethod;
+            notif = "Notification : SUCCESS! => Your choice of payment method => BRI";
         } else {
             throw new Error(`Notification : FAILED! => Sorry, the payment method choice you entered is invalid..!`);
         }
 
-        resolve(messages);
-        reject(messages);
-        console.info(messages);
+        resolve(value);
+        reject(value);
+        console.info(notif);
 
     });
 }
@@ -94,13 +100,13 @@ const getPayment = (choosePackage) => {
 const orderTicket = async () => {
     while (true) {
         let readline1 = require('readline-sync');
-        const chooseQueue = parseInt(readline1.question(
+        const registCode = parseInt(readline1.question(
             `WORKSHOP WEB DEVELOPMENT\nQueue number options : 1 ~ 12\n-----------------------------\nEnter your queue number : `
         ));
-        const numbRegister = await getRegister(chooseQueue);
-        const paymentCode = await getPayment(numbRegister);
-        console.info([numbRegister, paymentCode]);
-        insertData({ registCode: chooseQueue, packageCode: numbRegister, paymentCode: paymentCode })
+        const packageCode = await getRegister(registCode);
+        const paymentCode = await getPayment(packageCode);
+        console.info([registCode, packageCode, paymentCode]);
+        insertData({ registCode: registCode, packageCode: packageCode, paymentCode: paymentCode })
             .then(() => {
                 console.info(Objects);
             });
@@ -114,6 +120,5 @@ const orderTicket = async () => {
     }
 };
 
-orderTicket()
-    .catch(Err => console.error(Err.toString()));
+orderTicket().catch(Err => console.error(Err.toString()));
 
