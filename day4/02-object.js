@@ -1,3 +1,16 @@
+/**
+ * Untuk menghilangkan kata "users" pada tiap objek array,
+ * Anda dapat menggunakan sintaks Object.assign untuk menyalin properti dari objek yang dibuat
+ * dengan constructor function users ke dalam objek baru tanpa menyertakan properti constructor.
+ * 
+ * @param {*} name 
+ * @param {*} email 
+ * @param {*} address 
+ * @param {*} active 
+ * @param {*} age 
+ * 
+ */
+
 function users(name, email, address, active, age) {
     this.name = name,
         this.email = email,
@@ -42,18 +55,3 @@ objects.push(user4);
 
 console.info(objects);
 
-
-
-// function tambahData(data, array) {
-//     array.push(data);
-// }
-
-// let data = [];
-// let user1 = new data();
-// user1.name = 'faqih';
-// user1.email = 'faqih@gmail.com';
-// user1.address = 'bogor';
-// user1.active = true;
-// user1.age = 23;
-// tambahData(user1, data);
-// console.log(data);  // output: [1, 2, 3, 4]
