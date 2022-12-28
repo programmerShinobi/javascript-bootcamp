@@ -1,10 +1,10 @@
 const getNomorAntri = (nomor) => {
     return new Promise((resolve, reject) => {
-        resolve(nomor);
-        reject(nomor);
         setTimeout(() => {
+            resolve(nomor);
+            reject(nomor);
             console.info(nomor);
-        }, 1000);
+        }, 10000);
     });
 }
 
@@ -21,12 +21,12 @@ const pilihPaket = (nomor, paket) => {
             }
         }
 
-        resolve(messages);
-        reject(messages);
 
         setTimeout(() => {
+            resolve(messages);
+            reject(messages);
             console.info(messages);
-        }, 2000);
+        }, 7000);
     });
 }
 
@@ -39,17 +39,17 @@ const tagihan = (paket) => {
             packages = 24000;
         }
 
-        resolve(packages);
-        reject(packages);
 
         setTimeout(() => {
+            resolve(packages);
+            reject(packages);
             console.info(packages);
-        }, 3000);
+        }, 4000);
     });
 }
 
 const orderKFC = async (paket) => {
-    const nomorAntri = await getNomorAntri(5);
+    const nomorAntri = await getNomorAntri(11);
     const menu = await pilihPaket(nomorAntri, paket);
     const total = await tagihan(menu);
     return [nomorAntri, menu, total];

@@ -1,14 +1,14 @@
 const getNomorAntri = (nomor) => {
     setTimeout(() => {
         console.info(nomor);
-    }, 10000);
+    }, 1000);
     return nomor;
 }
 
 const pilihPaket = (nomor, paket) => {
     let messages;
     if (nomor <= 10 && (isNaN(nomor))) {
-        throw new Error('Silahkan antri');
+        messages = 'Silahkan antri';
     } else {
         if (paket === "A") {
             messages = "KFC Paket A";
@@ -33,7 +33,7 @@ const tagihan = (paket) => {
 
     setTimeout(() => {
         console.info(packages);
-    }, 4000);
+    }, 3000);
     return packages;
 }
 
@@ -44,5 +44,4 @@ const orderKFC = async (paket) => {
     return [nomorAntri, menu, total];
 }
 
-orderKFC("A").then(res => console.info(res))
-    .catch(err => console.info(err));
+orderKFC("A").then(res => console.info(res));
