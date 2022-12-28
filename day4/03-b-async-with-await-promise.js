@@ -11,8 +11,8 @@ const getNomorAntri = (nomor) => {
 const pilihPaket = (nomor, paket) => {
     return new Promise((resolve, reject) => {
         let messages;
-        if (nomor <= 10 && (isNaN(nomor))) {
-            messages = 'Silahkan antri';
+        if (nomor <= 10 && !(isNaN(nomor))) {
+            throw new Error('Silahkan antri');
         } else {
             if (paket === "A") {
                 messages = "KFC Paket A";
@@ -49,10 +49,11 @@ const tagihan = (paket) => {
 }
 
 const orderKFC = async (paket) => {
-    const nomorAntri = await getNomorAntri(11);
+    const nomorAntri = await getNomorAntri(5);
     const menu = await pilihPaket(nomorAntri, paket);
     const total = await tagihan(menu);
     return [nomorAntri, menu, total];
 }
 
-orderKFC("A").then(res => console.info(res));
+orderKFC("A").then(res => console.info(res))
+    .catch(Err => console.info(Err.toString()));
