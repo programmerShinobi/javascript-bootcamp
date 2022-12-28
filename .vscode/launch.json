@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}\\day4\\02-object.js",
+            "program": "${workspaceFolder}\\day4\\03-b-async-with-await-promise.js",
             "console": "integratedTerminal"
         }
     ]
