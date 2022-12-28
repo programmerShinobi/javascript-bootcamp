@@ -1,6 +1,6 @@
 /**
- * buat 2 object array,
- * proses input data dari object array pertama harus lebih dulu dari object array ke 2
+ * Buat 2 object array.
+ * Proses input data dari object array pertama harus lebih dulu dari object array ke 2
  * 1. fungsi insert obj1 => a. buat tanpa set timeout dan pakai promise
  *                          b. buat dengan set timeout dan tidak pakai promise
  *
@@ -9,6 +9,14 @@
  * 
  */
 
+
+/**
+ * 1. Terminal RUN in directory source code : npm install readline-sync
+ * 2. Create launch.json
+ * 3. add in Configuration ===> "program": "${file}",
+ *                              "console": "integratedTerminal"
+ * 4. Run and Debug with VS Code
+ */
 //-------------------------------------------------(2)
 const getRegister = (chooseQueue) => {
     return new Promise((resolve, reject) => {
