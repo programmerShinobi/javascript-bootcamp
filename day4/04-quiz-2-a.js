@@ -47,6 +47,9 @@ const getRegister = (registCode) => {
             let choosePackage = readline2.question(
                 `\nPackage code options :\nA => Rp. 300.000 (VIP)\nB => Rp. 200.000 (Reguler)\nC => Rp. 100.000 (Economy)\n--------------------------\nEnter your package A/B/C : `
             );
+            if (choosePackage) {
+                console.info("Waiting 5 second...")
+            }
             if (choosePackage == "A") {
                 value = choosePackage;
                 notif = "Notification : SUCCESS! => Your choice of code package => A => Rp. 300.000 (VIP)";
@@ -60,9 +63,11 @@ const getRegister = (registCode) => {
                 throw new Error(`Notification : FAILED! => Sorry, the package code choice you entered is invalid..!`);
             }
         }
-        resolve(value);
-        reject(value);
-        console.info(notif);
+        setTimeout(() => {
+            resolve(value);
+            reject(value);
+            console.info(notif);
+        }, 5000)
 
     });
 }
@@ -75,6 +80,9 @@ const getPayment = (choosePackage) => {
         let chooseMethod = readline2.question(
             `\nPayment method options :\n- BCA\n- BNI\n- BRI \n-------------------------------------\nEnter your payment method BCA/BNI/BRI : `
         );
+        if (chooseMethod) {
+            console.info("Waiting 3 second...")
+        }
         if (chooseMethod == "BCA") {
             value = chooseMethod;
             notif = "Notification : SUCCESS! => Your choice of payment method => BCA";
@@ -88,9 +96,11 @@ const getPayment = (choosePackage) => {
             throw new Error(`Notification : FAILED! => Sorry, the payment method choice you entered is invalid..!`);
         }
 
-        resolve(value);
-        reject(value);
-        console.info(notif);
+        setTimeout(() => {
+            resolve(value);
+            reject(value);
+            console.info(notif);
+        }, 3000)
 
     });
 }
