@@ -2,6 +2,11 @@
  * Untuk menghilangkan kata "users" pada tiap objek array,
  * Anda dapat menggunakan sintaks Object.assign untuk menyalin properti dari objek yang dibuat
  * dengan constructor function users ke dalam objek baru tanpa menyertakan properti constructor.
+ * Dengan menggunakan Object.assign, 
+ * Anda dapat menyalin semua properti dari objek yang dibuat dengan constructor function users
+ * ke dalam objek baru tanpa menyertakan properti constructor.
+ * Sehingga, setiap objek yang terdapat dalam array objects tidak akan memiliki properti constructor
+ * dan kata "users" tidak akan muncul pada tiap objek.
  * 
  * @param {*} name 
  * @param {*} email 
