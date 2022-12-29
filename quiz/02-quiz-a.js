@@ -1,4 +1,4 @@
-// Buat 2 object array.
+// Buat object array.
 const tickets = [];
 
 function insertTicket(ticket, array) {
@@ -26,21 +26,26 @@ function validateTicket(ticket) {
 
 // Fungsi untuk memesan tiket
 async function orderTicket(name, price, quantity, array) {
-    try {
-        // Buat objek tiket baru
-        const ticket = { name, price };
-        // Lakukan loop sebanyak quantity kali
-        for (let i = 0; i < quantity; i++) {
-            // Tambahkan tiket ke dalam array
-            await insertTicket(ticket, array);
+    if (name == typeof String) {
+        try {
+            // Buat objek tiket baru
+            const ticket = { name, price };
+            // Lakukan loop sebanyak quantity kali
+            for (let i = 0; i < quantity; i++) {
+                // Tambahkan tiket ke dalam array
+                await insertTicket(ticket, array);
+            }
+            console.info(`${quantity} tickets for ${name} ordered successfully`);
+        } catch (error) {
+            console.error(error);
         }
-        console.info(`${quantity} tickets for ${name} ordered successfully`);
-    } catch (error) {
-        console.error(error);
+    } else {
+        throw new Error("Tipe data nama harus string");
     }
+
 }
 
 // Pemanggilan fungsi orderTicket
-orderTicket("Exhibition", 50, 5, tickets);
+orderTicket(9, 50, 5, tickets);
 orderTicket("Contest", 30, 3, tickets);
-orderTicket("Colloquium", 60, 7, tickets);
+orderTicket("Colloquium", 60, 0, tickets);

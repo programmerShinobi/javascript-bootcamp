@@ -1,4 +1,4 @@
-// Buat 2 object array.
+// Buat object array.
 const tickets = [];
 
 function insertTicket(ticket, array) {
@@ -6,11 +6,11 @@ function insertTicket(ticket, array) {
         // Cek apakah tiket merupakan objek yang valid
         if (validateTicket(ticket)) {
             // Tambahkan tiket ke dalam array setelah 2 detik
-            setTimeout(() => {
-                array.push(ticket);
-                // Beri tahu bahwa tiket telah ditambahkan dengan sukses
-                resolve();
-            }, 2000);
+
+            array.push(ticket);
+            // Beri tahu bahwa tiket telah ditambahkan dengan sukses
+            resolve();
+
         } else {
             // Beri tahu bahwa terjadi kesalahan saat menambahkan tiket
             reject(new Error("Invalid ticket"));
@@ -40,11 +40,9 @@ async function orderTicket(name, price, quantity, array) {
     }
 }
 
+
 // Pemanggilan fungsi orderTicket
-orderTicket("Exhibition", 50, 5, tickets);
+orderTicket("Exhibition", 25, 5, tickets);
 orderTicket("Contest", 30, 3, tickets);
 orderTicket("Colloquium", 60, 7, tickets);
 
-if (condition) {
-    console.info(tickets);
-}
