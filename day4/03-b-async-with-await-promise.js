@@ -47,7 +47,7 @@ const tagihan = (paket) => {
 }
 
 const orderKFC = async (paket) => {
-    const nomorAntri = await getNomorAntri(5);
+    const nomorAntri = await getNomorAntri(11);
     const menu = await pilihPaket(nomorAntri, paket);
     const total = await tagihan(menu);
     return [nomorAntri, menu, total];
