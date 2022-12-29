@@ -1,3 +1,14 @@
+/**
+ * Buat 2 object array.
+ * Proses input data dari object array pertama harus lebih dulu dari object array ke 2
+ * 1. fungsi insert obj1 => a. buat tanpa set timeout dan pakai promise
+ *                          b. buat dengan set timeout dan tidak pakai promise
+ *
+ * 2. fungsi insert obj2 => a. buat set timeout dan pakai promise
+ *                          b. buat tanpa set timeout dan tanpa pakai promise
+ * 
+ */
+
 // Buat object array.
 const tickets = [];
 
@@ -45,4 +56,7 @@ async function orderTicket(name, price, quantity, array) {
 orderTicket("Exhibition", 25, 5, tickets);
 orderTicket("Contest", 30, 3, tickets);
 orderTicket("Colloquium", 60, 7, tickets);
+
+// Menampilkan semua data object di dalam array
+console.info(tickets);
 
