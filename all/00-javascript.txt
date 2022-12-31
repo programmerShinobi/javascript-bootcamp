@@ -1,0 +1,9 @@
+JavaScript
+
+Syntax JavaScript mencakup :
+-> whitespace
+-> statements
+-> identifiers
+-> comments
+-> expressions
+-> keywords
