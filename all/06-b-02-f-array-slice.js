@@ -14,11 +14,16 @@
  * 
  */
 
-const numbers = [1, 2, 3, 4, 5];
 
-const part = numbers.slice(1, 3);  // mengambil 2 elemen mulai dari indeks ke-1
-console.info(part);  // output: [2, 3]
-console.info(numbers);  // output: [1, 2, 3, 4, 5]
+let fruits = ['apple', 'banana', 'mango', 'orange', 'grapes'];
+console.info(fruits);
 
-const all = numbers.slice();  // mengambil semua elemen dari array
-console.info(all);  // output: [1, 2, 3, 4, 5]
+let slicedFruits = fruits.slice(1, 3); // (index ke 1, index ke 3) ---> ambil nilai dari index ke 1 sampai index sebelum index ke 3, yaitu 2
+// slicedFruits akan berisi ['banana', 'mango']
+console.info(slicedFruits);
+console.info(fruits);
+
+
+let slicedFruits2 = fruits.slice(2); // (index ke 2) ---> ambil nilai dari index ke-2 sampai nilai index akhir
+
+console.log(slicedFruits2); // ['mango', 'orange', 'pineapple']
