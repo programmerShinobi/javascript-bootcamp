@@ -16,20 +16,22 @@
  * 
  */
 
-const numbers = [1, 2, 3, 4, 5];
-console.info(numbers);
+const numbers1 = [1, 2, 3, 4, 5];
+const splice1 = numbers1.splice(2, 3);  // (menghapus element dari index ke-2, menghapus sebanyak 3 element)
+console.info(splice1);  // output : [ 3, 4, 5 ]
+console.info(numbers1);  // output : [ 1, 2 ]
 
-const removed = numbers.splice(2, 3);  // menghapus 2 elemen mulai dari indeks ke-2 ---> (index ke 2, 3 index dari index ke 2 )
-console.info(removed);  // output: [3, 4]
-console.info(numbers);  // output: [1, 2, 5]
+//-----------------------------------------------------------
 
-numbers.splice(1, 0, 6, 7, 8);  // menambahkan 3 elemen mulai dari indeks ke-1
-console.info(numbers);  // output: [1, 6, 7, 8, 2, 5]
+const numbers2 = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const splice2 = numbers2.splice(3, 5, 66, 77, 88);  // (menghapus element dari index ke-3, menghapus sebanyak 5 element, element yang ditambahkan memiliki value : 66, 77, 88)
+console.info(splice2); // output : [ 4, 5, 6, 7, 8 ]
+console.info(numbers2);  // output: [ 1, 2, 3, 66, 77, 88, 9 ]
 
-const angka = [11, 22, 33, 44, 55];
-console.info(angka); // [11, 22, 33, 44, 55]
+//-----------------------------------------------------------
 
-const hapus = angka.splice(0, 0, 99, 88, 77, 66);
-console.info(hapus); // [] ---> array kosong, karena yang ada pada parameter [0,0], yaitu index ke-0 = 0, dan jumlah element yang akan dihapus adalah 0 dari indeks ke-0
-console.info(angka); // [99, 88, 77, 66, 11, 22, 33, 44, 55]
+const angka = [1, 2, 3, 4, 5];
+const splice3 = angka.splice(0, 0, 919, 818, 717, 616); // (menghapus element dari index ke-0, menghapus sebanyak 0, element yang ditambahkan memiliki value : 919, 818, 717, 616)
+console.info(splice3); // output : [..]
+console.info(angka); // output ; [919, 818, 717, 616, 1, 2, 3, 4, 5]
 
