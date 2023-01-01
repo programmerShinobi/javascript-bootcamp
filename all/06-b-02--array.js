@@ -3,6 +3,7 @@
  * ---> Tipe data di JavaScript
  *      yang digunakan untuk menyimpan sekumpulan nilai
  *      atau elemen yang terkait
+ * 
  * Array terdapat beberapa methode : 
  * ---> array.push() : Menambah elemen baru ke akhir array dan mengembalikan elemen tersebut
  * 
