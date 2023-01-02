@@ -45,11 +45,11 @@
  * 
  * ---> array.indexOf() : Mencari indeks elemen pertama dalam array yang sama dengan elemen yang ditentukan
  * 
+ * ---> array.lastIndexOf() : Mencari indeks elemen terakhir dalam array yang sama dengan elemen yang ditentukan
+ * 
  * ---> array.isArray() : Memeriksa apakah suatu variabel merupakan array
  * 
  * ---> array.keys() : Mengembalikan iterator yang mengiterasi indeks-indeks dalam array
- * 
- * ---> array.lastIndexOf() : Mencari indeks elemen terakhir dalam array yang sama dengan elemen yang ditentukan
  * 
  * ---> array.map() : Mengembalikan array baru yang terdiri dari hasil dari masing-masing elemen array yang diubah sesuai dengan function yang ditentukan.
  * 
