@@ -25,8 +25,6 @@
  * 
  * ---> array.sort() : Mengurutkan elemen dalam array
  * 
- * ---> array.copyWithin()  : Menyalin elemen dari array ke posisi lain dalam array yang sama
- * 
  * ---> array.entries() : Mengembalikan iterator yang mengiterasi pasangan indeks-elemen dalam array
  * 
  * ---> array.every() : Memeriksa apakah semua elemen dalam array memenuhi kondisi yang ditentukan
@@ -42,6 +40,8 @@
  * ---> array.forEach() : Mengiterasi setiap elemen dalam array
  * 
  * ---> array.includes() : Memeriksa apakah array berisi elemen yang ditentukan
+ * 
+ * ---> array.copyWithin()  : Menyalin elemen dari array ke posisi lain dalam array yang sama
  * 
  * ---> array.indexOf() : Mencari indeks elemen pertama dalam array yang sama dengan elemen yang ditentukan
  * 
