@@ -57,8 +57,6 @@
  * 
  * ---> array.reduceRight() : Sama dengan reduce, tapi mengurangi elemen dari kanan ke kiri
  * 
- * ---> array.some() : Memeriksa apakah ada setidaknya satu elemen dalam array yang memenuhi kondisi yang ditentukan
- * 
  * ---> array.toString() : Mengubah array menjadi string
  * 
  * ---> array.values() : Mengembalikan iterator yang mengiterasi elemen-elemen dalam array
