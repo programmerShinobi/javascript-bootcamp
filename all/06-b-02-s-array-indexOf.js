@@ -12,10 +12,10 @@
  * array = [item]
  * array.indexOf(item, start)
  * (
- *      menghitung jumlah item pada element array,
+ *      mencari item pada element array dari element pertama hingga terakhir,
  *          dimulai dari indeks start
  * )
- * ===> menghitung jumlah item di setiap index array
+ * ===> mencari item di setiap index array
  */
 
 let array1 = [1, 2, 3, 4, 3, 5, 3];
@@ -37,10 +37,20 @@ while (array2.indexOf(3) != -1) {
                 6
      */
 
-    array2[array2.indexOf(3)] = "found";
-    // isi indeks ke 3 = found
+    array2[array2.indexOf(3)] = `found indeks ke-${array2.indexOf(3)}`;
+    // isi element yang memiliki value 3 = found
 }
 
 console.info(array2);
-// output : [ 1, 2, 'found', 4, 'found', 5, 'found' ]
-
+/**
+ * output
+    [
+        1,
+        2,
+        'found indeks ke-2',
+        4,
+        'found indeks ke-4',
+        5,
+        'found indeks ke-6'
+    ]
+ */
