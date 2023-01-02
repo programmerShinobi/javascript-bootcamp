@@ -10,12 +10,12 @@
 
 /**
  * array = [item]
- * array.indexOf(item, start)
+ * array.indexOf(item, indexStart)
  * (
- *      mencari item pada element array dari element pertama hingga terakhir,
- *          dimulai dari indeks start
+ *      mencari item pada element array dari indeks pertama sampai indeks terakhir,
+ *          dimulai dari indexStart
  * )
- * ===> mencari item di setiap index array
+ * 
  */
 
 

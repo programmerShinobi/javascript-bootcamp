@@ -13,12 +13,12 @@
 
 /**
  * array = [item]
- * array.lastIndexOf(item, start)
+ * array.lastIndexOf(item, indexStart)
  * (
- *      mencari item pada element array dari element terakhir hingga pertama,
- *          dimulai dari indeks start
+ *      mencari item pada element array dari indeks terakhir sampai indeks pertama,
+ *          dimulai dari indexStart
  * )
- * ===> mencari item di setiap index array
+ * 
  */
 
 /*
