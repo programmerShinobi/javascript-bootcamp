@@ -18,6 +18,26 @@
  * ===> mencari item di setiap index array
  */
 
+
+/*
+arr.lastIndexOf(7, 3) :
+-------------------------------------------------------------------------------------------------
+step-1
+          |0|----->|3|              menentukan indeks ke 3 berada di element ke 4
+arr     = [1, 2, 3, 4, 5, 6, 7, 8]
+-------------------------------------------------------------------------------------------------
+step-2
+                   |3|-------->|7|  lalu mencari value 7 dari indeks 3 sampai indeks terakhir (7)
+                            |6|     value 7 berada di index 6
+arr     = [1, 2, 3, 4, 5, 6, 7, 8]
+-------------------------------------------------------------------------------------------------
+maka hasil dari arr.lastIndexOf(7, 3) = 6
+*/
+let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+console.log(arr.indexOf(7, 3)); // output: 2
+console.info(`\n`); /*---------------------------------*/
+
+
 let array1 = [1, 2, 3, 4, 3, 5, 3];
 
 console.info(array1.indexOf(3));       // output: 2

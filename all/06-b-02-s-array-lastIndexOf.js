@@ -22,21 +22,21 @@
  */
 
 /*
-step(1)
-Menentukan indeks ke-5
+arr.lastIndexOf(3, 5) :
+------------------------------------------------------------------------------------------------
+step-1
+          |0|<-----------|5|        menentukan indeks ke 5 berada di element ke 6
+arr     = [1, 2, 3, 4, 5, 6, 7, 8];
+------------------------------------------------------------------------------------------------
+step-2
+          |0|<-----------|5|        lalu mencari value 3 dari indeks 5 sampai indeks pertama (0)
+                |2|                 value 3 berada di indeks 2
 arr     = [1, 2, 3, 4, 5, 6, 7, 8]
-indeks ke |0|----------->|5|
-
-step(2)
-Mencari value 3 dari kanan ke kiri
-dimulai dari indeks ke 4 (sebelum indeks ke 5)
-arr     = [1, 2, 3, 4, 5, 6, 7, 8]
-mencari value 3    |0|-->|0| 
-
+------------------------------------------------------------------------------------------------
+maka hasil dari arr.lastIndexOf(3, 5) = 2
 */
 let arr = [1, 2, 3, 4, 5, 6, 7, 8];
-console.log(arr.lastIndexOf(7, 5)); // output: 2
-
+console.log(arr.lastIndexOf(3, 5)); // output: 2
 console.info(`\n`); /*---------------------------------*/
 
 let array1 = [1, 2, 3, 4, 3, 5, 3];
@@ -48,21 +48,21 @@ console.info(array1.lastIndexOf(3, 4));    // output: 4
 
 console.info(`\n`); /*---------------------------------*/
 
-// let array2 = [1, 2, 3, 4, 3, 5, 3];
+let array2 = [1, 2, 3, 4, 3, 5, 3];
 
-// while (array2.lastIndexOf(3) != -1) {
-//     console.info(array2.lastIndexOf(3));
-//     /* output :
-//                 6
-//                 4
-//                 2
-//      */
+while (array2.lastIndexOf(3) != -1) {
+    console.info(array2.lastIndexOf(3));
+    /* output :
+                6
+                4
+                2
+     */
 
-//     array2[array2.lastIndexOf(3)] = `found indeks ke-${array2.lastIndexOf(3)}`;
-//     // isi element yang memiliki value 3 = found indeks ke-..
-// }
+    array2[array2.lastIndexOf(3)] = `found indeks ke-${array2.lastIndexOf(3)}`;
+    // isi element yang memiliki value 3 = found indeks ke-..
+}
 
-// console.info(array2);
+console.info(array2);
 /**
  * output :
     [
