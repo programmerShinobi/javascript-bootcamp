@@ -4,7 +4,7 @@
  *      dalam kode program, terutama dalam bahasa pemrograman yang menggunakan kapitalisasi
  * 
  * Jenis case yang umum digunakan dalam pemrograman :
- * 1.   Uppercase 
+ * 1.   UpperCase 
  * 2.   CamelCase 
  * 3.   CamelCase 
  * 4.   PascalCase 

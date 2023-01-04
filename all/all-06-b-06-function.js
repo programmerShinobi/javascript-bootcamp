@@ -25,4 +25,4 @@ function add(a, b) {
 }
 
 const sum = add(1, 2); // sum akan bernilai 3
-console.info(sum); // 3 ---> didapat dari add(1+3)
+console.info(sum); // 3 ---> didapat dari add(1+2)
