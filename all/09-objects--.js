@@ -19,8 +19,8 @@ obj2.prop2 = "value2 obj2";
 obj2.prop3 = 123;
 obj2.prop4 = true;
 
-console.log(obj1.prop1); // "value1"
-console.log(obj2.prop1); // Output: "value1"
+console.log(obj1.prop1); // value1 obj1
+console.log(obj2.prop1); // value1 obj2
 
 
 

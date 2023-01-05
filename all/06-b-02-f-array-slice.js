@@ -23,7 +23,6 @@ let slicedFruits = fruits.slice(1, 3); // (index ke 1, index ke 3) ---> ambil ni
 console.info(slicedFruits);
 console.info(fruits);
 
-
 let slicedFruits2 = fruits.slice(2); // (index ke 2) ---> ambil nilai dari index ke-2 sampai nilai index akhir
 
 console.info(slicedFruits2); // ['mango', 'orange', 'pineapple']
