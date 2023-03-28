@@ -1,16 +1,14 @@
-var message = 'Hi'; 
+var message = 'Hi';
 
 function say() {
     var message = 'hello';
     console.info(message);
-
 }
 
 say();
 console.info(message);
 
-
-let x = 10; 
+let x = 10;
 if (x == 10) {
     console.log(message);
 }

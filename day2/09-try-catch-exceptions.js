@@ -8,7 +8,7 @@ try {
 } catch (e) {
     console.error({ name: e.name, message: e.message });
 } finally {
-    console.info("Program Code JS Run ..")
+    console.info("Program Code JS Run ..");
 }
 
 console.log('Bye');
